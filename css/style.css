@@ -20,6 +20,12 @@ header {
    justify-content: center;
    align-items: center; 
 }
+@media screen and (max-width: 830px) {
+    /*　画面サイズが830px以下の時はここを読み込む　*/
+    .header-left {
+        margin-left: 15px;
+    }
+}
 .icon {
     height: 38px;
 }
@@ -48,7 +54,6 @@ header {
     margin-bottom: 70px;
 }
 @media screen and (max-width: 830px) {
-    /*　画面サイズが830px以下の時はここを読み込む　*/
     .description p {
         padding: 0 5px;
     }
@@ -163,12 +168,6 @@ header {
     margin: 10px 0;
     font-size: 19px;
 }
-@media screen and (min-width:830px) and (max-width: 1100px) {
-    /*　画面サイズが830pxから1100pxまではここを読み込む　*/
-    .rec-title {
-        font-size: 15px;
-    }    
-}
 .rec-bottom {
     height: 274px;
 }
@@ -194,6 +193,9 @@ button {
     color: white;
     border-radius: 5px;
     font-family: serif;
+}
+button:hover {
+    opacity: .8;
 }
 .rec-bottom button {
     padding: 8px 14px;
