@@ -1,24 +1,20 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Helvetica, sans-serif;
-    color: rgb(39, 39, 39);
-    font-weight: lighter;
-}
-p {
+    font-family: "Yu Gothic Merdium", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    color: #333;
 }
 h1 {
-    font-family: 'Noto Serif JP', serif;
-    font-weight: lighter;
+    font-family: "Yu Micho", "ヒラギノ明朝 ProN W3", "HG明朝E", "MS P明朝", "MS 明朝", Helvetica, sans-serif;
 }
 header {
     width: 100%;
-    background-color: rgb(24, 25, 37);
+    background-color: #212235;
+    display: flex;
+    justify-content: left;
 }
 .header-left {
-   /* border: 1px solid pink; */
    margin-left: 30px;
-   width: 20%;
    padding: 11px 0;
    display: flex;
    justify-content: center;
@@ -26,9 +22,6 @@ header {
 }
 .icon {
     height: 38px;
-    /* color: white; */
-    /* background-color: white; */
-
 }
 .header-left span {
     margin-left: 18px;
@@ -38,16 +31,14 @@ header {
 }
 .main-visual {
     height: 400px;
-    background: black;
-}
-.main-visual img {
     width: 100%;
-    height: 100%;
+    background: url("../img/island.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .description {
     text-align: center;
-    /* height: 200px; */
-    /* border: 1px solid pink; */
 }
 .description h1 {
     font-size: 23px;
@@ -56,21 +47,33 @@ header {
 .description p {
     margin-bottom: 70px;
 }
+@media screen and (max-width: 830px) {
+    /*　画面サイズが830px以下の時はここを読み込む　*/
+    .description p {
+        padding: 0 5px;
+    }
+}
 .profile-wrap {
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: #F5F5F5;
 }
+@media screen and (max-width: 830px) {
+    .profile-wrap {
+        flex-direction: column;   
+    }
+}
 .profile-left, .profile-right {
     width: 30%;
-    /* height: 100px; */
-    /* border: 3px solid black; */
+}
+@media screen and (max-width: 830px) {
+    .profile-left, .profile-right {
+        width: 100%;   
+    }
 }
 .profile-left {
-    /* align-items: center; */
     display: flex;
     justify-content: center;
     padding: 30px 0;
@@ -83,6 +86,12 @@ header {
 .profile-right {
     padding-left: 50px;
 }
+@media screen and (max-width: 830px) {
+    .profile-right {
+        padding-left: 0;
+        text-align: center;
+    }
+}
 .profile-right h1 {
     font-size: 30px;
     margin-bottom: 30px;
@@ -91,12 +100,16 @@ header {
     display: flex;
     font-size: 22px;
 }
+@media screen and (max-width: 830px) {
+    .profile-details {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 45px;
+    }
+}
 .details-left, .details-right {
-    /* border: 1px solid pink; */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: left; */
     text-align: left;
     line-height: 40px;
 }
@@ -106,11 +119,9 @@ header {
 .details-right {
     padding-left: 30px;
 }
-
 .recs-wrap {
     width: 100%;
     text-align: center;
-    /* border: 1px solid orange; */
 }
 .section-title {
     font-size: 25px;
@@ -124,69 +135,98 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    /* border: 1px solid red; */
     width: 80%;
     margin: 0 auto;
 }
-
+@media screen and (max-width: 830px) {
+    .recs {
+        flex-direction: column;
+        width: 90%;
+    }
+}
 .rec {
     width: 31%;
-    /* border: 1px solid pink; */
     height: 480px;
     text-align: left;
-    position: relative;
+}
+@media screen and (max-width: 830px) {
+    .rec {
+        width: 100%;
+        height: auto;
+        margin-bottom: 41px;
+    }
 }
 .rec img {
-    /* height: 120px; */
     width: 100%;
 }
 .rec-title {
     margin: 10px 0;
+    font-size: 19px;
+}
+@media screen and (min-width:830px) and (max-width: 1100px) {
+    /*　画面サイズが830pxから1100pxまではここを読み込む　*/
+    .rec-title {
+        font-size: 15px;
+    }    
 }
 .rec-bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    height: 274px;
+}
+@media screen and (max-width: 830px) {
+    .rec-bottom {
+        height: auto;
+    }
+}
+.rec-description {
+    height: 140px;
+}
+@media screen and (max-width: 830px) {
+    .rec-description {
+        height: auto;
+    }
+}
+.btn-wrap {
+    text-align: right;
 }
 button {
     font-size: 18px;
-    background-color: #1E1F2E;
+    background-color: #212235;
     color: white;
     border-radius: 5px;
     font-family: serif;
 }
 .rec-bottom button {
-    /* font-size: 20px; */
     padding: 8px 14px;
-    /* background-color: #1E1F2E; */
-    /* color: white; */
 }
-
-
+@media screen and (max-width: 830px) {
+    .rec-bottom button {
+        margin-top: 18px;
+    }
+}
 .contact {
-    /* border: 1px solid pink; */
     text-align: center;
 }
 .contact h1 {
     padding: 120px 0 50px;
-    
+}
+@media screen and (max-width: 830px) {
+    .contact h1 {
+        padding: 60px 0 50px;
+    }
 }
 .contact p {
     margin-bottom: 30px;
 }
 .btn-contact {
-    /* font-size: 20px; */
     padding: 21px 63px;
-    /* background-color: #1E1F2E;
-    color: white; */
     margin-bottom: 90px;
 }
 
 footer {
-    background-color: rgb(17, 17, 17);
+    background-color: #1A1A1A;
     text-align: center;
 }
 footer p {
     padding: 20px 0;
-    color: rgb(202, 202, 202);
+    color: #F5F5F5;
 }
