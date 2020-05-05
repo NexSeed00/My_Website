@@ -218,6 +218,7 @@ button:hover {
 }
 .contact p {
     margin-bottom: 30px;
+    padding: 0 5px;
 }
 .btn-contact {
     padding: 21px 63px;
